@@ -54,10 +54,9 @@ export function HeroSection() {
           <h1 className="text-balance text-3xl font-semibold leading-tight md:text-5xl">
             {"Hi, I'm "}
             <span className="gradient-text font-bold">Eman Fatima</span>{" "}
-            <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-violet-500/30 bg-violet-500/10 px-2 py-0.5 text-sm text-violet-300 align-middle">
+            <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-violet-500/30 bg-violet-500/10 px-2 py-0.5 text-sm text-foreground align-middle">
               <Sparkles className="h-4 w-4" aria-hidden />
-              <span className="sr-only">Sparkles</span>
-              Crafting clean web apps
+              <span className="font-semibold">Crafting clean web apps</span>
             </span>
           </h1>
 

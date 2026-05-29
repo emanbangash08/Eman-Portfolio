@@ -41,6 +41,13 @@ const projects: Project[] = [
     github: "https://github.com/emanbangash08/Vixecommerce",
   },
   {
+    name: "SecureXPro",
+    description: "Desktop vulnerability assessment tool for web and network scanning, exploit identification, risk scoring, and report generation. Features role-based access for admins and agents with secure JWT authentication.",
+    stack: ["React", "Electron.js", "Node.js", "Python"],
+    image: "/securexpro-1.png",
+    github: "https://github.com/emanbangash08/SecureXpro-FYP",
+  },
+  {
     name: "GlowCare",
     description: "AI-powered skincare recommendation platform providing personalized beauty solutions with modern user interface design.",
     stack: ["Next.js", "Tailwind", "REST"],
@@ -89,7 +96,7 @@ export function ProjectsSection() {
                     style={{ objectPosition: p.imagePosition ?? "center" }}
                     whileHover={{ scale: 1.1 }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </CardHeader>
               <CardContent className="p-4">
