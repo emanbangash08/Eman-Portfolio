@@ -19,7 +19,7 @@ export function SiteNavbar() {
 
   return (
     <motion.header
-      className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/70 backdrop-blur-md"
+      className="sticky top-0 z-50 w-full border-b border-violet-500/20 bg-background/75 backdrop-blur-md shadow-sm shadow-violet-500/5"
       role="banner"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -33,14 +33,14 @@ export function SiteNavbar() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <motion.span 
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary"
+          <motion.span
+            className="flex h-7 w-7 items-center justify-center rounded-full bg-violet-500/15 text-violet-400"
             animate={{ rotate: 360 }}
             transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
           >
             <Sparkles className="h-4 w-4" aria-hidden="true" />
           </motion.span>
-          <span className="font-medium">Quratulain Bangash</span>
+          <span className="font-medium">Eman Fatima</span>
         </motion.a>
 
         {/* Desktop nav */}

@@ -63,7 +63,7 @@ export function ContactSection() {
         viewport={{ once: true }}
         className="text-balance text-2xl font-semibold md:text-3xl"
       >
-        Contact
+        <span className="gradient-text">Contact</span>
       </motion.h2>
 
       <motion.div
@@ -176,13 +176,13 @@ export function ContactSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.0 }}
           >
-            <SocialLink href="https://www.linkedin.com/in/qurat-ul-ain-bangash-6b77b524a/" label="LinkedIn">
+            <SocialLink href="https://www.linkedin.com/in/emanbangash8" label="LinkedIn">
               <Linkedin className="size-4" aria-hidden />
             </SocialLink>
-            <SocialLink href="https://github.com/quratulain08" label="GitHub">
+            <SocialLink href="https://github.com/emanbangash08" label="GitHub">
               <Github className="size-4" aria-hidden />
             </SocialLink>
-            <SocialLink href="mailto:anniebangash497@gmail.com" label="Email">
+            <SocialLink href="https://mail.google.com/mail/?view=cm&to=emanyykhan2003@gmail.com" label="Email">
               <Mail className="size-4" aria-hidden />
             </SocialLink>
           </motion.div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, Download } from "lucide-react"
+import Image from "next/image"
 
 export function AboutSection() {
   return (
@@ -16,9 +17,7 @@ export function AboutSection() {
         viewport={{ once: true }}
         className="text-center text-3xl font-semibold tracking-tight md:text-4xl"
       >
-        
-          About Me
-        
+        <span className="gradient-text">About Me</span>
       </motion.h2>
 
       {/* Card Container */}
@@ -33,11 +32,14 @@ export function AboutSection() {
               viewport={{ once: true }}
               className="flex justify-center"
             >
-              <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-teal-500/50 shadow-lg shadow-teal-500/20">
-                <img
-                  src="/assets/Qurat Ul Ain.png"
-                  alt="Quratulain Bangash"
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+              <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-violet-500/40 shadow-lg shadow-violet-500/15">
+                <Image
+                  src="/assets/part 4.png"
+                  alt="Eman Fatima"
+                  fill
+                  priority
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  style={{ objectPosition: "center 25%" }}
                 />
               </div>
             </motion.div>
@@ -51,20 +53,20 @@ export function AboutSection() {
                 viewport={{ once: true }} */}
            
               
-                Hi 👋 I’m <strong >Qurat Ul Ain Bangash</strong>, a{" "}
+                Hi 👋 I’m <strong>Eman Fatima</strong>, a{" "}
                 <strong>Full-Stack Web Developer</strong> and recent graduate who loves crafting modern, clean,
-                 and functional web applications. 
+                and functional web applications.
                 I’m passionate about turning ideas into smooth, interactive, and elegant
                 user experiences that feel effortless to use.
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
                 I specialize in building full-stack solutions with{" "}
-                <strong>React, Next.js, Node.js, Express, and PostgreSQL/MongoDB</strong>.  
-                My approach is simple -design with empathy, develop with precision, and deliver products that are fast,
-                accessible, and visually pleasing.  
-                I enjoy every part of the process, from designing UIs to integrating APIs and deploying production-ready
-                apps.
+                <strong>React, Node.js, Express.js, MongoDB, and Firebase</strong>.
+                My approach is simple — design with empathy, develop with precision, and deliver products that are
+                fast, secure, and visually pleasing.
+                I enjoy every part of the process, from designing UIs to implementing JWT authentication and
+                deploying production-ready apps.
               </p>
 
               {/* Skills List */}
@@ -90,7 +92,7 @@ export function AboutSection() {
               {/* CV Button */}
               <div className="pt-4">
                 <Button asChild className="bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300">
-                  <a href="/QURATULAIN-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+                  <a href="/Eman_Fatima_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
                     <Download className="mr-2 h-4 w-4" aria-hidden />
                     Download CV
                   </a>

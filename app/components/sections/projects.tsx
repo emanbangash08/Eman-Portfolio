@@ -10,50 +10,27 @@ type Project = {
   description: string
   stack: string[]
   image: string
+  imagePosition?: string
   live?: string
   github?: string
 }
 
 const projects: Project[] = [
   {
-    name: "Internship Log",
-    description: "Comprehensive internship progress tracking system built with modern web technologies for seamless monitoring and reporting.",
-    stack: ["Next.js", "PostgreSQL", "Tailwind"],
-    image: "/internship-progress-tracker-ui-mockup.jpg",
-    live: "https://fyp-project-orpin.vercel.app/",
-    github: "https://github.com/quratulain08/FYP-PROJECT",
+    name: "Cogo Shield",
+    description: "Personal safety app with guardian registration, emergency notifications, evidence recording, and escalation chain. Implements secure JWT authentication for user and guardian accounts.",
+    stack: ["React", "Node.js", "Express.js", "MongoDB", "Firebase"],
+    image: "/cogo-shield.png",
+    live: "https://cogo-shield-8f2h.vercel.app/",
+    github: "https://github.com/emanbangash08/cogo-shield",
   },
   {
     name: "Expense Tracker",
     description: "Full-stack MERN application for daily expense management with intuitive dashboard and comprehensive financial analytics.",
     stack: ["MongoDB", "Express", "React", "Node"],
     image: "/expense-tracker-dashboard.jpg",
-    live: "https://track-the-expenses.vercel.app/login",
-    github: "https://github.com/quratulain08/ExpenseTracker-Mern",
-  },
-  {
-    name: "GlowCare",
-    description: "AI-powered skincare recommendation platform providing personalized beauty solutions with modern user interface design.",
-    stack: ["Next.js", "Tailwind", "REST"],
-    image: "/skincare-recommendation-interface.jpg",
-    live: "#",
-    github: "#https://github.com/mahrukh-dev/glow-care-mern",
-  },
-  {
-    name: "Furnivo E-Commerce",
-    description: "Modern furniture e-commerce platform featuring product catalog, shopping cart, and secure payment integration.",
-    stack: ["Next.js", "PostgreSQL", "Tailwind"],
-    image: "/furniture-ecommerce-product-grid.jpg",
-    live: "https://furnivo-ecommerce.vercel.app/",
-    github: "https://github.com/quratulain08/Ecommerce-Nextjs",
-  },
-  {
-    name: "InfinityTechLabs",
-    description: "Professional corporate landing page showcasing technology services with responsive design and modern aesthetics.",
-    stack: ["React", "Tailwind"],
-    image: "/tech-company-landing-page-hero.jpg",
-    live: "https://infinitytechlabs.org/",
-    github: "https://github.com/FaseehHayat21/Industry-tech-labs-4.0",
+    live: "https://expense-tracker-three-red-37.vercel.app/",
+    github: "https://github.com/emanbangash08/ExpenseTracker",
   },
   {
     name: "Vix Commerce",
@@ -61,7 +38,22 @@ const projects: Project[] = [
     stack: ["Next.js", "AWS", "Analytics", "SEO"],
     image: "/vix-commerce-dashboard.jpg",
     live: "https://www.vixcommerce.com/",
-    github: "https://github.com/quratulain08/vixecommerce",
+    github: "https://github.com/emanbangash08/Vixecommerce",
+  },
+  {
+    name: "GlowCare",
+    description: "AI-powered skincare recommendation platform providing personalized beauty solutions with modern user interface design.",
+    stack: ["Next.js", "Tailwind", "REST"],
+    image: "/skincare-recommendation-interface.jpg",
+    github: "https://github.com/emanbangash08/GlowCare",
+  },
+  {
+    name: "HireNest",
+    description: "Generate tailored CVs and cover letters for every role, track every application and interview, and get insights on your progress — all from one dashboard.",
+    stack: ["React", "Node.js", "MongoDB", "Express.js"],
+    image: "/hirenest-1.png",
+    imagePosition: "left",
+    github: "https://github.com/emanbangash08/HireNest",
   },
 ]
 
@@ -75,7 +67,7 @@ export function ProjectsSection() {
         viewport={{ once: true }}
         className="text-balance text-2xl font-semibold md:text-3xl"
       >
-        Projects
+        <span className="gradient-text">Projects</span>
       </motion.h2>
 
       <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -87,13 +79,14 @@ export function ProjectsSection() {
             transition={{ duration: 0.45, delay: idx * 0.05 }}
             viewport={{ once: true }}
           >
-            <Card className="group h-full overflow-hidden border-border/60 bg-card/80 backdrop-blur hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+            <Card className="group h-full overflow-hidden border-border/60 bg-card/80 backdrop-blur hover:shadow-xl hover:shadow-violet-500/10 hover:border-violet-500/40 transition-all duration-300 hover:scale-[1.02]">
               <CardHeader className="p-0">
                 <div className="relative overflow-hidden">
                   <motion.img
                     src={p.image || "/placeholder.svg"}
                     alt={`${p.name} preview`}
                     className="h-40 w-full object-cover md:h-48 transition-transform duration-500"
+                    style={{ objectPosition: p.imagePosition ?? "center" }}
                     whileHover={{ scale: 1.1 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -119,25 +112,29 @@ export function ProjectsSection() {
                 </div>
               </CardContent>
               <CardFooter className="flex gap-2 p-4 pt-0">
-                <Button 
-                  asChild 
-                  size="sm" 
-                  className="bg-primary text-primary-foreground transform transition-all duration-200 hover:scale-105 hover:shadow-md"
-                >
-                  <a href={p.live || "#"} target="_blank" rel="noreferrer">
-                    Live Demo
-                  </a>
-                </Button>
-                <Button 
-                  asChild 
-                  size="sm" 
-                  variant="secondary"
-                  className="transform transition-all duration-200 hover:scale-105 hover:shadow-md"
-                >
-                  <a href={p.github || "#"} target="_blank" rel="noreferrer">
-                    GitHub
-                  </a>
-                </Button>
+                {p.live && (
+                  <Button
+                    asChild
+                    size="sm"
+                    className="bg-primary text-primary-foreground transform transition-all duration-200 hover:scale-105 hover:shadow-md"
+                  >
+                    <a href={p.live} target="_blank" rel="noreferrer">
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
+                {p.github && (
+                  <Button
+                    asChild
+                    size="sm"
+                    variant="secondary"
+                    className="transform transition-all duration-200 hover:scale-105 hover:shadow-md"
+                  >
+                    <a href={p.github} target="_blank" rel="noreferrer">
+                      GitHub
+                    </a>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           </motion.article>

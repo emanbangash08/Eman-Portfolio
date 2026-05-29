@@ -34,9 +34,9 @@ const SKILLS: Record<CategoryKey, SkillItem[]> = {
   Frontend: [
     { name: "HTML", level: 95 },
     { name: "CSS / Tailwind", level: 92, tag: "utility-first" },
-    { name: "JavaScript (ESNext)", level: 90 },
+    { name: "JavaScript (ESNext)", level: 80 },
     { name: "TypeScript", level: 82 },
-    { name: "React", level: 90 },
+    { name: "React", level: 93 },
     { name: "Next.js (App Router)", level: 86 },
   
   ],
@@ -50,7 +50,6 @@ const SKILLS: Record<CategoryKey, SkillItem[]> = {
   Tools: [
     { name: "Git & GitHub", level: 88 },
     { name: "Vercel", level: 82 },
-    { name: "Testing (Jest/RTL)", level: 60 },
     { name: "Design Systems", level: 72 },
   ],
 }
@@ -135,9 +134,6 @@ function EnhancedSkills() {
                   <span className="rounded-full bg-accent px-2 py-0.5 text-xs text-accent-foreground">
                     Tokens & theming
                   </span>
-                  <span className="rounded-full bg-accent px-2 py-0.5 text-xs text-accent-foreground">
-                    Testing mindset
-                  </span>
                   <span className="rounded-full bg-accent px-2 py-0.5 text-xs text-accent-foreground">Docs-first</span>
                 </>
               )}
@@ -211,7 +207,7 @@ function EnhancedSkills() {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary" aria-hidden="true" />
-                    Unit + integration tests where valuable
+                    Rapid prototyping and deployment
                   </li>
                 </>
               )}
@@ -251,7 +247,6 @@ function EnhancedSkills() {
                       Git/GitHub
                     </span>
                     <span className="rounded-md border border-border/60 bg-muted/40 px-2 py-0.5 text-xs">CI</span>
-                    <span className="rounded-md border border-border/60 bg-muted/40 px-2 py-0.5 text-xs">Testing</span>
                     <span className="rounded-md border border-border/60 bg-muted/40 px-2 py-0.5 text-xs">
                       Design tokens
                     </span>
@@ -350,7 +345,7 @@ function ProgressRow({ percent, className }: { percent: number; className?: stri
       aria-valuemax={100}
       aria-label="Skill level"
     >
-      <div className="h-full bg-primary" style={{ width: `${Math.max(0, Math.min(100, percent))}%` }} />
+      <div className="h-full progress-gradient rounded-full" style={{ width: `${Math.max(0, Math.min(100, percent))}%` }} />
     </div>
   )
 }
@@ -365,7 +360,7 @@ export function SkillsSection() {
         viewport={{ once: true }}
         className="text-balance text-2xl font-semibold md:text-3xl"
       >
-        Skills
+        <span className="gradient-text">Skills</span>
       </motion.h2>
 
       <EnhancedSkills />

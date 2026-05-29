@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react"
 
 export function SiteFooter() {
   return (
-    <footer className="mt-14s border-t">
+    <footer className="mt-14s border-t border-violet-500/20">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4  py-8 sm:flex-row">
         <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} • Built with Next.js + shadcn/ui</p>
         <nav className="flex items-center gap-4" aria-label="Footer">
@@ -17,17 +17,19 @@ export function SiteFooter() {
             Contact
           </Link>
         </nav>
-        {/* <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3">
           <a
             aria-label="Email me"
-            href="mailto:you@example.com"
+            href="https://mail.google.com/mail/?view=cm&to=emanyykhan2003@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground"
           >
             <Mail className="h-5 w-5" />
           </a>
           <a
             aria-label="GitHub"
-            href="https://github.com/yourname"
+            href="https://github.com/emanbangash08"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground"
@@ -36,14 +38,14 @@ export function SiteFooter() {
           </a>
           <a
             aria-label="LinkedIn"
-            href="https://www.linkedin.com/in/yourname"
+            href="https://www.linkedin.com/in/emanbangash8"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground"
           >
             <Linkedin className="h-5 w-5" />
           </a>
-        </div> */}
+        </div>
       </div>
     </footer>
   )

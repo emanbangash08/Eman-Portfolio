@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Quratulain Bangash - Full Stack Developer",
-    template: "%s | Quratulain Bangash"
+    default: "Eman Fatima - Full Stack Developer",
+    template: "%s | Eman Fatima"
   },
   description: "Full‑stack developer focused on building elegant, accessible, and performant experiences with React, Next.js, and modern tooling. Specializing in MERN Stack, Next.js, and AWS.",
   keywords: [
@@ -29,26 +29,26 @@ export const metadata: Metadata = {
     "MongoDB Developer",
     "Node.js Developer"
   ],
-  authors: [{ name: "Quratulain Bangash", url: "https://anniebangash497@gmail.com" }],
-  creator: "Quratulain Bangash",
+  authors: [{ name: "Eman Fatima", url: "https://anniebangash497@gmail.com" }],
+  creator: "Eman Fatima",
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Quratulain Bangash Portfolio",
-    title: "Quratulain Bangash - Full Stack Developer",
+    siteName: "Eman Fatima Portfolio",
+    title: "Eman Fatima - Full Stack Developer",
     description: "Full‑stack developer focused on building elegant, accessible, and performant experiences with React, Next.js, and modern tooling.",
     images: [
       {
         url: "/assets/myphoto.jpg",
         width: 1200,
         height: 630,
-        alt: "Quratulain Bangash - Full Stack Developer",
+        alt: "Eman Fatima - Full Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quratulain Bangash - Full Stack Developer",
+    title: "Eman Fatima - Full Stack Developer",
     description: "Full‑stack developer focused on building elegant, accessible, and performant experiences with React, Next.js, and modern tooling.",
     images: ["/assets/myphoto.jpg"],
   },
